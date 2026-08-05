@@ -10,12 +10,11 @@ import project5 from "../assets/images/project5.png";
 import project6 from "../assets/images/project6.png";
 import lms1 from "../assets/images/lms1.png";
 
-
 export const Bio = {
   name: "Abdul Hanan",
   roles: ["Full Stack Developer", "React.js Developer", "HTML/CSS Developer"],
   description:
-    "I am Abdul Hanan, a Computer Science student at Khwaja Fareed University of Engineering & Information Technology.I am passionate about front-end web development and currently building my skills in React.js, JavaScript, HTML, and CSS. I enjoy creating simple, responsive, and user-friendly web applications.My goal is to gain practical experience through internships and real-world projects where I can grow as a developer and contribute to meaningful work.",
+    "I am Abdul Hanan, a Computer Science student at Khwaja Fareed University of Engineering & Information Technology.I am passionate about Mern Stack web development and currently building my skills in React.js, JavaScript, HTML, and CSS. I enjoy creating simple, responsive, and user-friendly web applications.My goal is to gain practical experience through real-world projects where I can grow as a developer and contribute to meaningful work.",
   github: "https://github.com/AbdulHanan0234",
   resume: "/",
   linkedin: "https://www.linkedin.com/in/abdulhanan850/",
@@ -49,24 +48,24 @@ export const skills = [
       },
     ],
   },
-  // {
-  //   title: "Backend",
-  //   skills: [
-  //     {
-  //       name: "Node Js",
-  //       image: "https://nodejs.org/static/images/logo.svg",
-  //     },
-  //     {
-  //       name: "MongoDB",
-  //       image:
-  //         "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
-  //     },
-  //     {
-  //       name: "Firebase",
-  //       image: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
-  //     },
-  //   ],
-  // },
+  {
+    title: "Backend",
+    skills: [
+      {
+        name: "Node Js",
+        image: "https://nodejs.org/static/images/logo.svg",
+      },
+      {
+        name: "MongoDB",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
+      },
+      // {
+      //   name: "Firebase",
+      //   image: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
+      // },
+    ],
+  },
   // {
   //   title: "Android",
   //   skills: [
@@ -124,6 +123,11 @@ export const experiences = [
       "HTML",
       "CSS",
       "BOOTSTRAP",
+      "Versel",
+      "Render",
+      "MongoDB Atlas",
+      "JavaScript",
+      "Github",
     ],
     doc: "",
   },
@@ -187,20 +191,29 @@ export const projects = [
     description:
       "This project is the copy of the Learning Management System (LMS) of my university",
     image: lms1,
-    tags: ["React Js", "HTML", "CSS","Bootstrap 5","Git"],
-    category: "Web App",
+    tags: ["React Js", "HTML", "CSS", "Bootstrap 5", "Git"],
+    category: "web app",
     github: "https://github.com/AbdulHanan0234/lms",
     webapp: "https://abdulhanan0234.github.io/lms/",
   },
   {
     id: 5,
-    title: "Ecomerce Website",
+    title: "Shopper E-Commerce",
     date: "Jun 2026",
     description:
-      "I did this project from Youtube, Its only for Windows, Its not responsive",
+      "I did this Project as a practice, its a full fledged e-commerce website with frontend, backend and admin panel",
     image: project5,
-    tags: ["React Js", "HTML", "CSS"],
-    category: "Web App",
+    tags: [
+      "React Js",
+      "Render",
+      "Versel",
+      "Express Js",
+      "HTML",
+      "CSS",
+      "MongoDB Atlas",
+      "Git",
+    ],
+    category: "web app",
     github: "https://github.com/AbdulHanan0234/shopper",
     webapp: "https://shopper-5deheh86l-ah24.vercel.app/",
   },
@@ -209,10 +222,10 @@ export const projects = [
     title: "Ecomerce Website",
     date: "Jun 2026",
     description:
-      "This project I made using React Js, HTML, CSS for the Frontend and the backend was provided in the course. I did this project from watching a course on YouTube.I deployed my project on AWS(Elastic Beanstalk).",
+      "This project I made using React Js, HTML, CSS for the Frontend and the backend was provided in the course. I deployed my project on AWS(Elastic Beanstalk).",
     image: project1,
     tags: ["AWS", "React Js", "HTML", "CSS"],
-    category: "Web App",
+    category: "web app",
     github: "https://github.com/AbdulHanan0234/ssdev-ecommerce-project",
     webapp:
       "http://ecommerce-project-react-env.eba-nmzibzs2.eu-north-1.elasticbeanstalk.com/",
@@ -222,7 +235,7 @@ export const projects = [
     title: "ChatBot",
     date: "May 2026",
     description:
-      "this project is a chatbot that I built using React.Js, CSS, HTML for frontend and the backend was provided in the course. I did this project from watching a course on YouTube.I deployed my project on Github Pages.",
+      "This project is a chatbot that I built using React.Js, CSS, HTML for frontend and the backend was provided in the course.",
     image: project2,
     tags: ["React Js", "HTML", "CSS", "GitHub Pages"],
     category: "web app",
@@ -261,7 +274,7 @@ export const projects = [
     title: "YouTube Clone",
     date: "2024",
     description:
-      "This project is a YouTube clone that I built using HTML, CSS.This a single webpage project that I did from watching a course on YouTube. I deployed my project on Github Pages.",
+      "This project is a YouTube clone that I built using HTML, CSS.This a single webpage project .",
     image: project3,
     tags: ["HTML", "CSS", "GitHub Pages"],
     category: "web app",
@@ -273,10 +286,10 @@ export const projects = [
     title: "Ecomerce Website",
     date: "2024",
     description:
-      "This project is an e-commerce website that I built using HTML and CSS. It features a clean and modern design with a focus on user experience. I deployed my project on Github Pages.",
+      "This project is an e-commerce website that I built using HTML and CSS. It features a clean and modern design with a focus on user experience.",
     image: project6,
     tags: ["HTML", "CSS", "GitHub Pages"],
-    category: "Web App",
+    category: "web app",
     github: "https://github.com/AbdulHanan0234/RedStore",
     webapp: "https://abdulhanan0234.github.io/RedStore/",
   },
