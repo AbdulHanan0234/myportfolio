@@ -135,10 +135,10 @@ const Contact = () => {
     setLoading(true);
     emailjs
       .sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_06jg9ul",
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_seivn8u",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "nQNmZ-X5NFX1u06Bf",
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       )
       .then(
         () => {
