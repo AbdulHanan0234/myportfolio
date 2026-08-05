@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import { useState, useRef } from 'react'
 import styled from 'styled-components'
 import emailjs from '@emailjs/browser';
 import { Snackbar, Alert } from '@mui/material';
@@ -134,9 +134,14 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
     emailjs
-      .sendForm("service_06jg9ul", "template_seivn8u", form.current, "nQNmZ-X5NFX1u06Bf")
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_06jg9ul",
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_seivn8u",
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "nQNmZ-X5NFX1u06Bf",
+      )
       .then(
-        (result) => {
+        () => {
           setSnackbarSeverity("success");
           setSnackbarMsg("Email sent successfully!");
           setOpen(true);

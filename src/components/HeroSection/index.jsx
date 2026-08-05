@@ -6,7 +6,7 @@ import { Bio } from '../../data/constants';
 
 const HeroSection = () => {
     return (
-        <div id="about">
+        <div>
             <HeroContainer>
                 <HeroBg>
                     <HeroBgAnimation />
