@@ -13,8 +13,19 @@ import lms1 from "../assets/images/lms1.png";
 export const Bio = {
   name: "Abdul Hanan",
   roles: ["Full Stack Developer", "React.js Developer", "HTML/CSS Developer"],
-  description:
-    "I am Abdul Hanan, a Computer Science student at Khwaja Fareed University of Engineering & Information Technology.I am passionate about Mern Stack web development and currently building my skills in React.js, JavaScript, HTML, and CSS. I enjoy creating simple, responsive, and user-friendly web applications.My goal is to gain practical experience through real-world projects where I can grow as a developer and contribute to meaningful work.",
+  description: `
+
+Hi, I'm **Abdul Hanan** — a self-taught **MERN Stack Developer** who enjoys turning ideas into interactive web experiences.
+
+What started as curiosity about how websites work has grown into a passion for building them. I enjoy transforming ideas into functional, user-friendly applications, whether it's creating responsive interfaces with **React.js** or developing complete full-stack solutions using **Node.js, Express.js, and MongoDB**.
+
+I've built both frontend and full-stack projects, and every project has strengthened my problem-solving skills and deepened my understanding of modern web development.
+
+I'm currently looking for a **MERN Stack Internship** where I can learn from experienced developers, contribute to real-world projects, and continue growing as a developer.
+I don't just build websites—I enjoy building experiences that are clean, functional, and meaningful.
+
+  `,
+
   github: "https://github.com/AbdulHanan0234",
   resume: "/",
   linkedin: "https://www.linkedin.com/in/abdulhanan850/",

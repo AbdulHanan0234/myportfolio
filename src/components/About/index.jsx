@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebookF } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
 import { SocialMediaIcons, SocialMediaIcon } from './AboutStyle';
+import ReactMarkdown from "react-markdown";
 
 const Container = styled.div`
   display: flex;
@@ -39,10 +40,11 @@ const Title = styled.div`
 const Desc = styled.div`
   font-size: 18px;
   text-align: center;
-  max-width: 600px;
+  max-width: 670px;
   color: ${({ theme }) => theme.text_secondary};
   @media (max-width: 768px) {
     font-size: 16px;
+    max-width: 600px;
   }
 `;
 
@@ -51,7 +53,7 @@ const About = () => {
     <Container id="about">
       <Wrapper>
         <Title>About Me</Title>
-        <Desc>{Bio.description}</Desc>
+        <Desc><ReactMarkdown>{Bio.description}</ReactMarkdown></Desc>
         <SocialMediaIcons>
           <SocialMediaIcon href={Bio.github} target="_blank" rel="noopener noreferrer">
             <FaGithub />
