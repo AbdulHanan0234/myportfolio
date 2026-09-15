@@ -8,6 +8,8 @@ import project3 from "../assets/images/project3.png";
 import project4 from "../assets/images/project4.png";
 import project5 from "../assets/images/project5.png";
 import project6 from "../assets/images/project6.png";
+import project7 from "../assets/images/project7.png";
+import antigravityLogo from "../assets/images/antigravityLogo.png";
 import lms1 from "../assets/images/lms1.png";
 
 export const Bio = {
@@ -115,6 +117,10 @@ export const skills = [
         image:
           "https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg",
       },
+      {
+        name: "Antigravity",
+        image: antigravityLogo,
+      },
     ],
   },
 ];
@@ -195,6 +201,18 @@ export const education = [
 ];
 
 export const projects = [
+  {
+    id: 7,
+    title: "Moviesmod UI & Backend In My Own Style",
+    date: "August 2026",
+    description:
+      "A full-stack movie and TV series catalog web application inspired by MoviesMod, built with React, Node.js, Express, MongoDB, and The Movie Database (TMDB) API.",
+    image: project7,
+    tags: ["React Js", "TMDB API", "HTML", "CSS", "Git"],
+    category: "web app",
+    github: "https://github.com/AbdulHanan0234/moviesmod",
+    webapp: "https://moviesmod-ah.vercel.app/",
+  },
   {
     id: 6,
     title: "My University LMS",
