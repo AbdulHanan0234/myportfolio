@@ -9,7 +9,7 @@ import project4 from "../assets/images/project4.png";
 import project5 from "../assets/images/project5.png";
 import project6 from "../assets/images/project6.png";
 import project7 from "../assets/images/project7.png";
-import antigravityLogo from "../assets/images/antigravityLogo.png";
+import antigravityLogo from "../assets/images/antigravitylogo.png";
 import lms1 from "../assets/images/lms1.png";
 
 export const Bio = {
