@@ -11,6 +11,7 @@ const Container = styled.div`
   z-index: 1;
   align-items: center;
   padding: 80px 0;
+  scroll-margin-top: 90px;
 `;
 
 const Wrapper = styled.div`

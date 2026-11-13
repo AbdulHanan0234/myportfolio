@@ -12,6 +12,7 @@ align-items: center;
 @media (max-width: 960px) {
     padding: 0px;
 }
+scroll-margin-top: 90px;
 `
 
 const Wrapper = styled.div`

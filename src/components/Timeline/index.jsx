@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-// Lightweight replacement for @mui/lab Timeline — same vertical line + dot look.
+// Lightweight replacement for @mui/lab Timeline — vertical line + dot that
+// hugs the card and grows automatically as more items are added.
 // `dotSide` controls which side the dot/line sits on relative to the content.
 const List = styled.div`
   width: 100%;
@@ -9,7 +10,8 @@ const List = styled.div`
 const Item = styled.div`
   display: flex;
   align-items: stretch;
-  width: 100%;
+  width: fit-content;
+  margin: 0 auto;
 `;
 
 const Separator = styled.div`
@@ -18,6 +20,9 @@ const Separator = styled.div`
   align-items: center;
   width: 40px;
   flex-shrink: 0;
+  @media (max-width: 768px) {
+    width: 32px;
+  }
 `;
 
 const Dot = styled.div`
@@ -38,9 +43,11 @@ const Connector = styled.div`
 `;
 
 const Content = styled.div`
-  flex: 1;
   min-width: 0;
   padding: 12px 16px;
+  @media (max-width: 768px) {
+    padding: 12px 0;
+  }
 `;
 
 const Timeline = ({ items, renderItem, dotSide = 'left' }) => {

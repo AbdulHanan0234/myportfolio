@@ -11,6 +11,7 @@ const Container = styled.div`
     z-index: 1;
     align-items: center;
     padding: 0px 0px 60px 0px;
+    scroll-margin-top: 90px;
     @media (max-width: 960px) {
         padding: 0;
     }
@@ -63,9 +64,6 @@ const TimelineSection = styled.div`
     align-items: center;
     justify-content: center;
     gap: 12px;
-    @media (max-width: 660px) {
-        align-items: end;
-    }
 `;
 
 

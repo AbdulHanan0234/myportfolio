@@ -12,6 +12,7 @@ const Container = styled.div`
     z-index: 1;
     align-items: center;
     padding: 40px 0px 80px 0px;
+    scroll-margin-top: 90px;
     @media (max-width: 960px) {
         padding: 0;
     }

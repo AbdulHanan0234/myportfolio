@@ -8,6 +8,7 @@ justify-content: center;
 position: relative;
 z-index: 1;
 align-items: center;
+scroll-margin-top: 90px;
 `
 
 const Wrapper = styled.div`
