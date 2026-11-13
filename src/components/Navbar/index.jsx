@@ -14,7 +14,7 @@ import {
   MobileLink,
 } from "./NavbarStyledComponent";
 // import { DiCssdeck } from "react-icons/di";
-import ahicon from "../../assets/images/ahicon.png";
+import ahicon from "../../assets/images/ahicon.webp";
 import { FaBars } from "react-icons/fa";
 import { Bio } from "../../data/constants";
 // import { Close, CloseRounded } from "@mui/icons-material";
@@ -26,8 +26,8 @@ const Navbar = () => {
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo to="/">
-          <NavLink
+        <NavLogo href="#" aria-label="Back to top">
+          <div
             style={{
               display: "flex",
               alignItems: "center",
@@ -36,7 +36,6 @@ const Navbar = () => {
               cursor: "pointer",
             }}
           >
-            {/* <DiCssdeck size="3rem" /> */}
             <img
               style={{
                 height: "38px",
@@ -44,12 +43,12 @@ const Navbar = () => {
                 marginRight: "6px",
               }}
               src={ahicon}
-              alt="Icon"
+              alt="Abdul Hanan logo"
             />
             <Span style={{
               fontSize: '24px',
             }}>Portfolio</Span>
-          </NavLink>
+          </div>
         </NavLogo>
         <MobileIcon>
           <FaBars

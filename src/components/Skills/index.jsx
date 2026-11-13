@@ -24,7 +24,7 @@ gap: 12px;
 }
 `
 
-const Title = styled.div`
+const Title = styled.h2`
 font-size: 42px;
 text-align: center;
 font-weight: 600;
@@ -127,12 +127,12 @@ const Skills = () => {
         </Desc>
         <SkillsContainer>
           {skills.map((skill) => (
-            <Skill>
+            <Skill key={skill.title}>
               <SkillTitle>{skill.title}</SkillTitle>
               <SkillList>
                 {skill.skills.map((item) => (
-                  <SkillItem>
-                    <SkillImage src={item.image}/>
+                  <SkillItem key={item.name}>
+                    <SkillImage src={item.image} alt={`${item.name} logo`} loading="lazy" decoding="async" width="24" height="24" />
                     {item.name}
                   </SkillItem>
                 ))}

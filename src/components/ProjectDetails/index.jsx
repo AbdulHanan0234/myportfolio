@@ -1,11 +1,11 @@
-import { CloseRounded, GitHub, LinkedIn } from '@mui/icons-material';
-import { Modal } from '@mui/material';
+import { useEffect } from 'react';
+import { FaXmark, FaGithub, FaLinkedin } from 'react-icons/fa6';
 import styled from 'styled-components'
 
-const Container = styled.div`
+const Overlay = styled.div`
 width: 100%;
 height: 100%;
-position: absolute;
+position: fixed;
 top: 0;
 left: 0;
 background-color: #000000a7;
@@ -14,6 +14,7 @@ align-items: top;
 justify-content: center;
 overflow-y: scroll;
 transition: all 0.5s ease;
+z-index: 1300;
 `;
 
 const Wrapper = styled.div`
@@ -30,7 +31,7 @@ flex-direction: column;
 position: relative;
 `;
 
-const Title = styled.div`
+const Title = styled.h3`
   font-size: 28px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
@@ -153,7 +154,9 @@ const ButtonGroup = styled.div`
     gap: 12px;
 `;
 
-const Button = styled.a`
+const Button = styled.a.withConfig({
+    shouldForwardProp: (prop) => prop !== '$dull',
+})`
     width: 100%;
     text-align: center;
     font-size: 16px;
@@ -162,7 +165,7 @@ const Button = styled.a`
     padding: 12px 16px;
     border-radius: 8px;
     background-color: ${({ theme }) => theme.primary};
-    ${({ dull, theme }) => dull && `
+    ${({ $dull, theme }) => $dull && `
         background-color: ${theme.bgLight};
         color: ${theme.text_secondary};
         &:hover {
@@ -180,59 +183,77 @@ const Button = styled.a`
     }
 `;
 
+const CloseButton = styled.button`
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: ${({ theme }) => theme.text_primary};
+    font-size: 24px;
+    cursor: pointer;
+    padding: 4px;
+    line-height: 1;
+`;
 
-const index = ({ openModal, setOpenModal }) => {
+const ProjectDetails = ({ openModal, setOpenModal }) => {
     const project = openModal?.project;
-    return (
-        <Modal open={true} onClose={() => setOpenModal({ state: false, project: null })}>
-            <Container>
-                <Wrapper>
-                    <CloseRounded
-                        style={{
-                            position: "absolute",
-                            top: "10px",
-                            right: "20px",
-                            cursor: "pointer",
-                        }}
-                        onClick={() => setOpenModal({ state: false, project: null })}
-                    />
-                    <Image src={project?.image} />
-                    <Title>{project?.title}</Title>
-                    <Date>{project.date}</Date>
-                    <Tags>
-                        {project?.tags.map((tag) => (
-                            <Tag>{tag}</Tag>
-                        ))}
-                    </Tags>
-                    <Desc>{project?.description}</Desc>
-                    {project.member && (
-                        <>
-                            <Label>Members</Label>
-                            <Members>
-                                {project?.member.map((member) => (
-                                    <Member>
-                                        <MemberImage src={member.img} />
-                                        <MemberName>{member.name}</MemberName>
-                                        <a href={member.github} target="new" style={{textDecoration: 'none', color: 'inherit'}}>
-                                            <GitHub />
-                                        </a>
-                                        <a href={member.linkedin} target="new" style={{textDecoration: 'none', color: 'inherit'}}>
-                                            <LinkedIn />
-                                        </a>
-                                    </Member>
-                                ))}
-                            </Members>
-                        </>
-                    )}
-                    <ButtonGroup>
-                        <Button dull href={project?.github} target='new'>View Code</Button>
-                        <Button href={project?.webapp} target='new'>View Live App</Button>
-                    </ButtonGroup>
-                </Wrapper>
-            </Container>
 
-        </Modal>
+    const close = () => setOpenModal({ state: false, project: null });
+
+    // Close on Escape, like the MUI Modal did
+    useEffect(() => {
+        const onKeyDown = (e) => {
+            if (e.key === 'Escape') close();
+        };
+        window.addEventListener('keydown', onKeyDown);
+        return () => window.removeEventListener('keydown', onKeyDown);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    if (!project) return null;
+
+    return (
+        <Overlay onClick={close} role="dialog" aria-modal="true" aria-label={project.title}>
+            <Wrapper onClick={(e) => e.stopPropagation()}>
+                <CloseButton aria-label="Close project details" onClick={close}>
+                    <FaXmark />
+                </CloseButton>
+                <Image src={project.image} alt={`${project.title} screenshot`} />
+                <Title>{project.title}</Title>
+                <Date>{project.date}</Date>
+                <Tags>
+                    {project.tags?.map((tag) => (
+                        <Tag key={tag}>{tag}</Tag>
+                    ))}
+                </Tags>
+                <Desc>{project.description}</Desc>
+                {project.member && (
+                    <>
+                        <Label>Members</Label>
+                        <Members>
+                            {project.member.map((member) => (
+                                <Member key={member.name}>
+                                    <MemberImage src={member.img} alt={member.name} />
+                                    <MemberName>{member.name}</MemberName>
+                                    <a href={member.github} target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'inherit'}} aria-label={`${member.name} on GitHub`}>
+                                        <FaGithub />
+                                    </a>
+                                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'inherit'}} aria-label={`${member.name} on LinkedIn`}>
+                                        <FaLinkedin />
+                                    </a>
+                                </Member>
+                            ))}
+                        </Members>
+                    </>
+                )}
+                <ButtonGroup>
+                    <Button $dull href={project.github} target="_blank" rel="noopener noreferrer">View Code</Button>
+                    <Button href={project.webapp} target="_blank" rel="noopener noreferrer">View Live App</Button>
+                </ButtonGroup>
+            </Wrapper>
+        </Overlay>
     )
 }
 
-export default index
+export default ProjectDetails

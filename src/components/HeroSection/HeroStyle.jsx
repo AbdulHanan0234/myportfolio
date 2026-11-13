@@ -9,7 +9,7 @@ export const HeroContainer = styled.div`
   @media (max-width: 960px) {
     padding: 66px 16px;
   }
-  @media (max-width: 640) {
+  @media (max-width: 640px) {
     padding: 32px 16px;
   }
   z-index: 1;
@@ -111,11 +111,12 @@ export const Img = styled.img`
   }
 `;
 
-export const Title = styled.div`
+export const Title = styled.h1`
   font-weight: 700;
   font-size: 50px;
   color: ${({ theme }) => theme.text_primary};
   line-height: 68px;
+  margin: 0;
   @media (max-width: 960px) {
     text-align: center;
   }

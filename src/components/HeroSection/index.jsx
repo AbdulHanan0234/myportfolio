@@ -1,6 +1,5 @@
 import HeroBgAnimation from '../HeroBgAnimation'
-import { HeroContainer, HeroBg, HeroLeftContainer, Img, HeroRightContainer, HeroInnerContainer, TextLoop, Title, Span, SubTitle, ResumeButton } from './HeroStyle'
-import HeroImg from '../../assets/images/HeroImage.jpg'
+import { HeroContainer, HeroBg, HeroLeftContainer, Img, HeroRightContainer, HeroInnerContainer, TextLoop, Title, Span } from './HeroStyle'
 import Typewriter from 'typewriter-effect';
 import { Bio } from '../../data/constants';
 
@@ -26,13 +25,16 @@ const HeroSection = () => {
                                 />
                             </Span>
                         </TextLoop>
-                        {/* <SubTitle>{Bio.description}</SubTitle> */}
-                        {/* <ResumeButton href={Bio.resume} target='display'>Check Resume</ResumeButton> */}
                     </HeroLeftContainer>
 
                     <HeroRightContainer id="Right">
-
-                        <Img src={HeroImg} alt="hero-image" />
+                        <Img
+                            src="/hero.webp"
+                            alt="Abdul Hanan — Full Stack Developer"
+                            width="800"
+                            height="800"
+                            fetchPriority="high"
+                        />
                     </HeroRightContainer>
                 </HeroInnerContainer>
 

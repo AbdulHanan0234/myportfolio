@@ -142,7 +142,7 @@ const ExperienceCard = ({ experience }) => {
   return (
     <Card>
       <Top>
-        <Image src={experience.img} />
+        <Image src={experience.img} alt={`${experience.company} logo`} loading="lazy" decoding="async" width="200" height="112" />
         <Body>
           <Role>{experience.role}</Role>
           <Company>{experience.company}</Company>
@@ -158,7 +158,7 @@ const ExperienceCard = ({ experience }) => {
               <b>Skills:</b>
               <ItemWrapper>
                 {experience?.skills?.map((skill) => (
-                  <Skill>• {skill}</Skill>
+                  <Skill key={skill}>• {skill}</Skill>
                 ))}
               </ItemWrapper>
             </Skills>
@@ -166,8 +166,8 @@ const ExperienceCard = ({ experience }) => {
         )}
       </Description>
       {experience.doc && (
-        <a href={experience.doc} target="new">
-          <Document src={experience.doc} />
+        <a href={experience.doc} target="_blank" rel="noopener noreferrer">
+          <Document src={experience.doc} alt="Experience document" />
         </a>
       )}
     </Card>

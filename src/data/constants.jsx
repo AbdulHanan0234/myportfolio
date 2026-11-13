@@ -1,37 +1,23 @@
-import projectImg from "../assets/images/projectImg.png";
-import KFUEIT from "../assets/images/unnamed.jpg";
-import PGCLogo from "../assets/images/PGCLogo.jpg";
-import NGSSLogo from "../assets/images/NGSSLogo.jpg";
-import project1 from "../assets/images/project1.png";
-import project2 from "../assets/images/project2.png";
-import project3 from "../assets/images/project3.png";
-import project4 from "../assets/images/project4.png";
-import project5 from "../assets/images/project5.png";
-import project6 from "../assets/images/project6.png";
-import project7 from "../assets/images/project7.png";
-import antigravityLogo from "../assets/images/antigravitylogo.png";
-import lms1 from "../assets/images/lms1.png";
+import projectImg from "../assets/images/projectImg.webp";
+import KFUEIT from "../assets/images/unnamed.webp";
+import PGCLogo from "../assets/images/PGCLogo.webp";
+import NGSSLogo from "../assets/images/NGSSLogo.webp";
+import project1 from "../assets/images/project1.webp";
+import project2 from "../assets/images/project2.webp";
+import project3 from "../assets/images/project3.webp";
+import project4 from "../assets/images/project4.webp";
+import project5 from "../assets/images/project5.webp";
+import project6 from "../assets/images/project6.webp";
+import project7 from "../assets/images/project7.webp";
+import antigravityLogo from "../assets/images/antigravitylogo.webp";
+import lms1 from "../assets/images/lms1.webp";
 
 export const Bio = {
   name: "Abdul Hanan",
   roles: ["Full Stack Developer", "React.js Developer", "HTML/CSS Developer"],
-  description: `
-
-Hi, I'm **Abdul Hanan** — a self-taught **MERN Stack Developer** who enjoys turning ideas into interactive web experiences.
-
-What started as curiosity about how websites work has grown into a passion for building them. I enjoy transforming ideas into functional, user-friendly applications, whether it's creating responsive interfaces with **React.js** or developing complete full-stack solutions using **Node.js, Express.js, and MongoDB**.
-
-I've built both frontend and full-stack projects, and every project has strengthened my problem-solving skills and deepened my understanding of modern web development.
-
-I'm currently looking for a **MERN Stack Internship** where I can learn from experienced developers, contribute to real-world projects, and continue growing as a developer.
-I don't just build websites—I enjoy building experiences that are clean, functional, and meaningful.
-
-  `,
-
   github: "https://github.com/AbdulHanan0234",
   resume: "/",
   linkedin: "https://www.linkedin.com/in/abdulhanan850/",
-  twitter: "/",
   insta: "https://www.instagram.com/abdulhanan850/",
   facebook: "https://www.facebook.com/abdulhanan850/",
 };
@@ -47,17 +33,15 @@ export const skills = [
       },
       {
         name: "HTML",
-        image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png",
+        image: "/skills/html5.png",
       },
       {
         name: "CSS",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/a/ab/Official_CSS_Logo.svg",
+        image: "/skills/css.svg",
       },
       {
         name: "Bootstrap",
-        image:
-          "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
+        image: "/skills/bootstrap.png",
       },
     ],
   },
@@ -66,12 +50,11 @@ export const skills = [
     skills: [
       {
         name: "Node Js",
-        image: "https://nodejs.org/static/images/logo.svg",
+        image: "/skills/nodejs.svg",
       },
       {
         name: "MongoDB",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
+        image: "/skills/mongodb.svg",
       },
       // {
       //   name: "Firebase",
@@ -104,18 +87,15 @@ export const skills = [
     skills: [
       {
         name: "Git",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg",
+        image: "/skills/git.svg",
       },
       {
         name: "GitHub",
-        image:
-          "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+        image: "/skills/github.png",
       },
       {
         name: "VS Code",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg",
+        image: "/skills/vscode.svg",
       },
       {
         name: "Antigravity",
@@ -129,9 +109,9 @@ export const experiences = [
   {
     id: 0,
     img: projectImg,
-    role: "I have a done few courses online and offline and built a few projects  ",
-    company: "Flipr Inovations Pvt. Ltd.",
-    date: "jULY 2024 - PRESENT",
+    role: "I have done a few courses online and offline and built a few projects",
+    company: "Flipr Innovations Pvt. Ltd.",
+    date: "July 2024 - Present",
     desc: "I have hands-on experience with these skills and have built a few projects using them. I am always eager to learn new technologies and improve my skills.",
     skills: [
       "AWS",
@@ -175,7 +155,7 @@ export const education = [
     img: KFUEIT,
     school:
       "Khwaja Fareed University of Engineering and Information Technology, Rahim Yar Khan",
-    date: "july 2024 - july 2028",
+    date: "July 2024 - July 2028",
     grade: "3.17 CGPA",
     desc: "I am currently pursuing a Bachelor's degree in Computer Science at Khwaja Fareed University of Engineering and Information Technology, Rahim Yar Khan. I have completed 4 semesters and have a CGPA of 3.17.",
     degree: "Bachelor of Computer Science",
@@ -195,7 +175,7 @@ export const education = [
     school: "National Garrison Secondary School, Rahim Yar Khan",
     date: "Apr 2020 - Apr 2022",
     grade: "92.3%",
-    desc: "I completed my Scondary School (10th) education at National Garrison Secondary School, Rahim Yar Khan, I did my Metric(10th) in Science.",
+    desc: "I completed my Secondary School (10th) education at National Garrison Secondary School, Rahim Yar Khan, where I did my Matric (10th) in Science.",
     degree: "HSC(10th), Science",
   },
 ];
@@ -203,7 +183,7 @@ export const education = [
 export const projects = [
   {
     id: 7,
-    title: "Moviesmod UI & Backend In My Own Style",
+    title: "Moviesmod UI & Backend",
     date: "August 2026",
     description:
       "A full-stack movie and TV series catalog web application inspired by MoviesMod, built with React, Node.js, Express, MongoDB, and The Movie Database (TMDB) API.",
@@ -216,7 +196,7 @@ export const projects = [
   {
     id: 6,
     title: "My University LMS",
-    date: "JUly 2026",
+    date: "July 2026",
     description:
       "This project is the copy of the Learning Management System (LMS) of my university",
     image: lms1,
@@ -227,7 +207,7 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Shopper E-Commerce",
+    title: "Shopper — Full-Stack E-Commerce",
     date: "Jun 2026",
     description:
       "I did this Project as a practice, its a full fledged e-commerce website with frontend, backend and admin panel",
@@ -248,7 +228,7 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Ecomerce Website",
+    title: "E-Commerce Website (AWS)",
     date: "Jun 2026",
     description:
       "This project I made using React Js, HTML, CSS for the Frontend and the backend was provided in the course. I deployed my project on AWS(Elastic Beanstalk).",
@@ -274,7 +254,7 @@ export const projects = [
 
   {
     id: 2,
-    title: "Newslettter Website",
+    title: "Newsletter Website",
     date: "2025",
     description:
       "This is a simple newsletter website that I built using HTML and CSS. It features a clean and modern design with a focus on user experience.",
@@ -312,7 +292,7 @@ export const projects = [
   },
   {
     id: 0,
-    title: "Ecomerce Website",
+    title: "RedStore E-Commerce",
     date: "2024",
     description:
       "This project is an e-commerce website that I built using HTML and CSS. It features a clean and modern design with a focus on user experience.",

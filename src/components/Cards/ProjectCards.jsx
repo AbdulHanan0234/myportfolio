@@ -69,7 +69,7 @@ const Details = styled.div`
   gap: 0px;
   padding: 0px 2px;
 `;
-const Title = styled.div`
+const Title = styled.h3`
   font-size: 20px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_secondary};
@@ -80,6 +80,7 @@ const Title = styled.div`
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin: 0;
 `;
 
 const Date = styled.div`
@@ -122,10 +123,10 @@ const Avatar = styled.img`
 const ProjectCards = ({ project, setOpenModal }) => {
   return (
     <Card onClick={() => setOpenModal({ state: true, project: project })}>
-      <Image src={project.image} />
+      <Image src={project.image} alt={`${project.title} project screenshot`} loading="lazy" decoding="async" width="800" height="800" />
       <Tags>
         {project.tags?.map((tag) => (
-          <Tag>{tag}</Tag>
+          <Tag key={tag}>{tag}</Tag>
         ))}
       </Tags>
       <Details>
@@ -135,7 +136,7 @@ const ProjectCards = ({ project, setOpenModal }) => {
       </Details>
       <Members>
         {project.member?.map((member) => (
-          <Avatar src={member.img} />
+          <Avatar key={member.name} src={member.img} alt={member.name} />
         ))}
       </Members>
       {/* <Button>View Project</Button> */}

@@ -3,7 +3,6 @@ import { useState } from "react";
 import { darkTheme, lightTheme } from './utils/Themes';
 import Navbar from "./components/Navbar";
 import './App.css';
-import { BrowserRouter as Router } from 'react-router-dom';
 import HeroSection from "./components/HeroSection";
 import About from "./components/About";
 import Skills from "./components/Skills";
@@ -31,26 +30,24 @@ function App() {
   const [openModal, setOpenModal] = useState({ state: false, project: null });
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <Router >
-        <Navbar />
-        <Body>
-          <HeroSection />
-          <About />
-          <Wrapper>
-            <Skills />
-            <Experience />
-          </Wrapper>
-          <Projects openModal={openModal} setOpenModal={setOpenModal} />
-          <Wrapper>
-            <Education />
-            <Contact />
-          </Wrapper>
-          <Footer />
-          {openModal.state &&
-            <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
-          }
-        </Body>
-      </Router>
+      <Navbar />
+      <Body>
+        <HeroSection />
+        <About />
+        <Wrapper>
+          <Skills />
+          <Experience />
+        </Wrapper>
+        <Projects openModal={openModal} setOpenModal={setOpenModal} />
+        <Wrapper>
+          <Education />
+          <Contact />
+        </Wrapper>
+        <Footer />
+        {openModal.state &&
+          <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
+        }
+      </Body>
     </ThemeProvider>
   );
 }

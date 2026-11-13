@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebookF } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
 import { SocialMediaIcons, SocialMediaIcon } from './AboutStyle';
-import ReactMarkdown from "react-markdown";
 
 const Container = styled.div`
   display: flex;
@@ -25,7 +24,7 @@ const Wrapper = styled.div`
   gap: 12px;
 `;
 
-const Title = styled.div`
+const Title = styled.h2`
   font-size: 42px;
   text-align: center;
   font-weight: 600;
@@ -48,12 +47,37 @@ const Desc = styled.div`
   }
 `;
 
+const DescP = styled.p`
+  margin: 6px 0;
+  line-height: 1.6;
+`;
+
 const About = () => {
   return (
     <Container id="about">
       <Wrapper>
         <Title>About Me</Title>
-        <Desc><ReactMarkdown>{Bio.description}</ReactMarkdown></Desc>
+        <Desc>
+          <DescP>
+            Hi, I'm <strong>Abdul Hanan</strong> — a self-taught <strong>MERN Stack Developer</strong> who
+            enjoys turning ideas into interactive web experiences.
+          </DescP>
+          <DescP>
+            What started as curiosity about how websites work has grown into a passion for building them. I
+            enjoy transforming ideas into functional, user-friendly applications, whether it's creating
+            responsive interfaces with <strong>React.js</strong> or developing complete full-stack solutions
+            using <strong>Node.js, Express.js, and MongoDB</strong>.
+          </DescP>
+          <DescP>
+            I've built both frontend and full-stack projects, and every project has strengthened my
+            problem-solving skills and deepened my understanding of modern web development.
+          </DescP>
+          <DescP>
+            I'm currently looking for a <strong>MERN Stack Internship</strong> where I can learn from
+            experienced developers, contribute to real-world projects, and continue growing as a developer. I
+            don't just build websites—I enjoy building experiences that are clean, functional, and meaningful.
+          </DescP>
+        </Desc>
         <SocialMediaIcons>
           <SocialMediaIcon href={Bio.github} target="_blank" rel="noopener noreferrer">
             <FaGithub />

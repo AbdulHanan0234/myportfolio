@@ -1,7 +1,6 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
 import emailjs from '@emailjs/browser';
-import { Snackbar, Alert } from '@mui/material';
 
 const Container = styled.div`
 display: flex;
@@ -30,7 +29,7 @@ gap: 12px;
 }
 `
 
-const Title = styled.div`
+const Title = styled.h2`
 font-size: 42px;
 text-align: center;
 font-weight: 600;
@@ -119,7 +118,34 @@ const ContactButton = styled.input`
   font-weight: 600;
 `
 
+const Snackbar = styled.div`
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1400;
+  min-width: 280px;
+  max-width: calc(100% - 48px);
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  background-color: ${({ severity }) => (severity === 'success' ? '#2e7d32' : '#d32f2f')};
+  animation: snackbar-in 0.3s ease;
 
+  @keyframes snackbar-in {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+`
 
 const Contact = () => {
 
@@ -161,10 +187,15 @@ const Contact = () => {
       });
   }
 
-
+  // Auto-dismiss the toast after 6s
+  useEffect(() => {
+    if (!open) return;
+    const timer = setTimeout(() => setOpen(false), 6000);
+    return () => clearTimeout(timer);
+  }, [open, snackbarMsg]);
 
   return (
-    <Container>
+    <Container id="contact">
       <Wrapper>
         <Title>Contact</Title>
         <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
@@ -176,16 +207,15 @@ const Contact = () => {
           <ContactInputMessage placeholder="Message" rows="4" name="message" required />
           <ContactButton type="submit" value={loading ? 'Sending...' : 'Send'} disabled={loading} style={loading ? { opacity: 0.7, cursor: 'not-allowed' } : {}} />
         </ContactForm>
-        <Snackbar
-          open={open}
-          autoHideDuration={6000}
-          onClose={()=>setOpen(false)}
-          anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
-        >
-          <Alert onClose={()=>setOpen(false)} severity={snackbarSeverity} sx={{ width: '100%' }}>
+        {open && (
+          <Snackbar
+            severity={snackbarSeverity}
+            role={snackbarSeverity === 'success' ? 'status' : 'alert'}
+            onClick={() => setOpen(false)}
+          >
             {snackbarMsg}
-          </Alert>
-        </Snackbar>
+          </Snackbar>
+        )}
       </Wrapper>
     </Container>
   )
