@@ -12,19 +12,23 @@ const HeroSection = () => {
                 </HeroBg>
                 <HeroInnerContainer >
                     <HeroLeftContainer id="Left">
-                        <Title>Hi, I am <br /> {Bio.name}</Title>
-                        <TextLoop>
-                            I am a
-                            <Span>
-                                <Typewriter
-                                    options={{
-                                        strings: Bio.roles,
-                                        autoStart: true,
-                                        loop: true,
-                                    }}
-                                />
-                            </Span>
-                        </TextLoop>
+                        {/* Single h1 with name + roles — the whole hero headline
+                            is what crawlers see as the page's main heading */}
+                        <Title>
+                            Hi, I am <br /> {Bio.name}
+                            <TextLoop>
+                                I am a
+                                <Span>
+                                    <Typewriter
+                                        options={{
+                                            strings: Bio.roles,
+                                            autoStart: true,
+                                            loop: true,
+                                        }}
+                                    />
+                                </Span>
+                            </TextLoop>
+                        </Title>
                     </HeroLeftContainer>
 
                     <HeroRightContainer id="Right">

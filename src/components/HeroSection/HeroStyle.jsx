@@ -128,7 +128,7 @@ export const Title = styled.h1`
   }
 `;
 
-export const TextLoop = styled.div`
+export const TextLoop = styled.span`
   font-weight: 600;
   font-size: 32px;
   display: flex;
