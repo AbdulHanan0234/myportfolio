@@ -182,6 +182,18 @@ export const education = [
 
 export const projects = [
   {
+    id: 8,
+    title: "Campusfix",
+    date: "November 2026",
+    description:
+      "A full-stack movie and TV series catalog web application inspired by MoviesMod, built with React, Node.js, Express, MongoDB, and The Movie Database (TMDB) API.",
+    image: project8,
+    tags: ["ReactJs", "HTML", "CSS", "Git"],
+    category: "web app",
+    github: "https://github.com/AbdulHanan0234/CampusFix",
+    webapp: "https://campusfix-ah.vercel.app/",
+  },
+  {
     id: 7,
     title: "Moviesmod UI & Backend",
     date: "August 2026",
