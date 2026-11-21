@@ -9,6 +9,7 @@ import project4 from "../assets/images/project4.webp";
 import project5 from "../assets/images/project5.webp";
 import project6 from "../assets/images/project6.webp";
 import project7 from "../assets/images/project7.webp";
+import project8 from "../assets/images/project8.webp";
 import antigravityLogo from "../assets/images/antigravitylogo.webp";
 import lms1 from "../assets/images/lms1.webp";
 
@@ -120,7 +121,7 @@ export const experiences = [
       "HTML",
       "CSS",
       "BOOTSTRAP",
-      "Versel",
+      "Vercel",
       "Render",
       "MongoDB Atlas",
       "JavaScript",
@@ -183,12 +184,21 @@ export const education = [
 export const projects = [
   {
     id: 8,
-    title: "Campusfix",
+    title: "CampusFix — Campus Issue Tracker",
     date: "November 2026",
     description:
-      "A full-stack movie and TV series catalog web application inspired by MoviesMod, built with React, Node.js, Express, MongoDB, and The Movie Database (TMDB) API.",
+      "A full-stack campus maintenance platform where students report facility issues and staff resolve them through role-based dashboards. Includes a Gemini-powered AI report assistant, a private-chat Lost & Found system, and JWT authentication.",
     image: project8,
-    tags: ["ReactJs", "HTML", "CSS", "Git"],
+    tags: [
+      "React Js",
+      "Node Js",
+      "Express Js",
+      "MongoDB Atlas",
+      "Gemini AI",
+      "JWT Auth",
+      "Vercel",
+      "Git",
+    ],
     category: "web app",
     github: "https://github.com/AbdulHanan0234/CampusFix",
     webapp: "https://campusfix-ah.vercel.app/",
@@ -198,7 +208,7 @@ export const projects = [
     title: "Moviesmod UI & Backend",
     date: "August 2026",
     description:
-      "A full-stack movie and TV series catalog web application inspired by MoviesMod, built with React, Node.js, Express, MongoDB, and The Movie Database (TMDB) API.",
+      "A full-stack movie and TV series catalog inspired by MoviesMod, pairing a React front end with a custom Node.js/Express API and MongoDB, enriched with metadata from the TMDB API.",
     image: project7,
     tags: ["React Js", "TMDB API", "HTML", "CSS", "Git"],
     category: "web app",
@@ -210,7 +220,7 @@ export const projects = [
     title: "My University LMS",
     date: "July 2026",
     description:
-      "This project is the copy of the Learning Management System (LMS) of my university",
+      "A front-end recreation of my university's Learning Management System, replicating its student dashboard and course interface with a responsive React and Bootstrap UI.",
     image: lms1,
     tags: ["React Js", "HTML", "CSS", "Bootstrap 5", "Git"],
     category: "web app",
@@ -222,12 +232,12 @@ export const projects = [
     title: "Shopper — Full-Stack E-Commerce",
     date: "Jun 2026",
     description:
-      "I did this Project as a practice, its a full fledged e-commerce website with frontend, backend and admin panel",
+      "A full-stack e-commerce platform built as a hands-on practice project, featuring a customer storefront, a REST API backend, and an admin panel for managing products and orders.",
     image: project5,
     tags: [
       "React Js",
       "Render",
-      "Versel",
+      "Vercel",
       "Express Js",
       "HTML",
       "CSS",
@@ -243,7 +253,7 @@ export const projects = [
     title: "E-Commerce Website (AWS)",
     date: "Jun 2026",
     description:
-      "This project I made using React Js, HTML, CSS for the Frontend and the backend was provided in the course. I deployed my project on AWS(Elastic Beanstalk).",
+      "An e-commerce front end built with React, HTML, and CSS, integrated with a course-provided backend API and deployed to production on AWS Elastic Beanstalk.",
     image: project1,
     tags: ["AWS", "React Js", "HTML", "CSS"],
     category: "web app",
@@ -256,7 +266,7 @@ export const projects = [
     title: "ChatBot",
     date: "May 2026",
     description:
-      "This project is a chatbot that I built using React.Js, CSS, HTML for frontend and the backend was provided in the course.",
+      "A conversational chatbot application with a React, HTML, and CSS front end that communicates with a course-provided backend API to deliver responses.",
     image: project2,
     tags: ["React Js", "HTML", "CSS", "GitHub Pages"],
     category: "web app",
@@ -269,7 +279,7 @@ export const projects = [
     title: "Newsletter Website",
     date: "2025",
     description:
-      "This is a simple newsletter website that I built using HTML and CSS. It features a clean and modern design with a focus on user experience.",
+      "A responsive newsletter website built with HTML and CSS, designed with a clean, modern layout and a focus on readability and user experience.",
     image: project4,
     tags: ["HTML", "CSS", "GitHub Pages"],
     category: "web app",
@@ -295,7 +305,7 @@ export const projects = [
     title: "YouTube Clone",
     date: "2024",
     description:
-      "This project is a YouTube clone that I built using HTML, CSS.This a single webpage project .",
+      "A single-page clone of the YouTube homepage built with HTML and CSS, recreating the video grid, sidebar navigation, and a responsive layout.",
     image: project3,
     tags: ["HTML", "CSS", "GitHub Pages"],
     category: "web app",
@@ -307,7 +317,7 @@ export const projects = [
     title: "RedStore E-Commerce",
     date: "2024",
     description:
-      "This project is an e-commerce website that I built using HTML and CSS. It features a clean and modern design with a focus on user experience.",
+      "A multi-page e-commerce storefront built with HTML and CSS, featuring product listings, product detail views, and a fully responsive layout.",
     image: project6,
     tags: ["HTML", "CSS", "GitHub Pages"],
     category: "web app",

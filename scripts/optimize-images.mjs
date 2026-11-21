@@ -15,7 +15,7 @@ const jobs = [
   // Hero: displayed at max 400px circle -> 800px for retina
   { src: path.join(images, "HeroImage.jpg"), out: path.join(pub, "hero.webp"), width: 800, quality: 80 },
   // Project screenshots: cards are 330px wide, modal up to ~760px -> 800px
-  ...[1, 2, 3, 4, 5, 6, 7].map((n) => ({
+  ...[1, 2, 3, 4, 5, 6, 7, 8].map((n) => ({
     src: path.join(images, `project${n}.png`),
     out: path.join(images, `project${n}.webp`),
     width: 800,
